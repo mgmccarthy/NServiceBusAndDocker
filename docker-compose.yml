@@ -5,7 +5,7 @@ services:
   endpoint:
     image: endpoint
     build:
-      context: .\NSB6SelfHostedClientMVC.Handlers
+      context: .\NServiceBusAndDocker.Endpoint
       dockerfile: Dockerfile
     container_name: endpoint
     tty: true
@@ -13,7 +13,7 @@ services:
   mvc:
     image: mvc
     build:
-      context: .\NSB6SelfHostedClientMVC
+      context: .\NServiceBusAndDocker.MVC
       dockerfile: Dockerfile
     ports:
      - "80:80"

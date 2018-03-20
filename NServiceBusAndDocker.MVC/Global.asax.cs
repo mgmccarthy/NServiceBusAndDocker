@@ -23,8 +23,8 @@ namespace NServiceBusAndDocker.MVC
             endpointConfiguration.AuditProcessedMessagesTo("audit");
             endpointConfiguration.SendOnly();
 
-            //var connection = @"Data Source=sql; Initial Catalog=NsbSqlPersistenceAndTransport; Integrated Security=False; User ID=sa; Password=Password123!; Connect Timeout=60; Encrypt=False;";
-            const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Database=NsbSqlPersistenceAndTransport;Integrated Security=True;Max Pool Size=100";
+            const string connectionString = @"Data Source=sql; Initial Catalog=NsbSqlPersistenceAndTransport; Integrated Security=False; User ID=sa; Password=Password123!; Connect Timeout=60; Encrypt=False;";
+            //const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Database=NsbSqlPersistenceAndTransport;Integrated Security=True;Max Pool Size=100";
 
             var transportSettings = endpointConfiguration.UseTransport<SqlServerTransport>();
             transportSettings.ConnectionString(connectionString);

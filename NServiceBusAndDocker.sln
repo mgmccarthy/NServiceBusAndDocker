@@ -11,7 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBusAndDocker.Messag
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2B043876-AA71-4494-B455-612211A1C7A6}"
 	ProjectSection(SolutionItems) = preProject
-		CreateAzureResources.ps1 = CreateAzureResources.ps1
 		docker-compose.yml = docker-compose.yml
 		StartApplication.ps1 = StartApplication.ps1
 		StopApplication.ps1 = StopApplication.ps1
