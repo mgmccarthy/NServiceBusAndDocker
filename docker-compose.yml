@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  endpoint:
+    image: endpoint
+    build:
+      context: .\NSB6SelfHostedClientMVC.Handlers
+      dockerfile: Dockerfile
+    container_name: endpoint
+    tty: true
+
+  mvc:
+    image: mvc
+    build:
+      context: .\NSB6SelfHostedClientMVC
+      dockerfile: Dockerfile
+    ports:
+     - "80:80"
+    container_name: mvc
+    depends_on:
+      - endpoint
+
+networks:
+  default:
+    external:
+      name: nat

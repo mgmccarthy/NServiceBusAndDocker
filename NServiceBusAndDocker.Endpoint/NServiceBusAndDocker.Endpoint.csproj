@@ -65,6 +65,8 @@
     <Compile Include="TestEventHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".dockerignore" />
+    <None Include="Dockerfile" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

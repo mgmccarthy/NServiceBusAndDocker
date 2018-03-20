@@ -1,0 +1,18 @@
+#line containing ** will ignore everything in the same directory as the Dockerfile.
+**
+
+#the exclamation can then be used to reference any files you DO wish to send to the docker daemon.
+!bin
+bin\*.pdb
+
+!App_Data
+App_Data\*.txt
+!Content
+!fonts
+!Scripts
+!Views
+!favicon.ico
+!Global.asax
+!Global.axax.cs
+!*.config
+!index.html
